@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hub</title>
+<style>
+  :root {
+    --bg: #0e0f11;
+    --surface: #1a1c1f;
+    --text: #f2f2f2;
+    --text-muted: #a0a4ab;
+    --accent: #6ea8fe;
+    --border: #2c2f34;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+
+    --radius: 12px;
+
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f7f8;
+      --surface: #ffffff;
+      --text: #1a1a1a;
+      --text-muted: #5b5f66;
+      --accent: #2563eb;
+      --border: #e0e1e4;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: var(--font-size-base);
+    line-height: 1.4;
+  }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-3);
+  }
+
+  h1 {
+    font-size: var(--font-size-lg);
+    margin: 0 0 var(--space-4);
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .card {
+    display: block;
+    min-height: 44px;
+    padding: var(--space-3);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    border-color: var(--accent);
+  }
+
+  .card h2 {
+    font-size: var(--font-size-base);
+    margin: 0 0 var(--space-1);
+    color: var(--accent);
+  }
+
+  .card p {
+    margin: 0;
+    color: var(--text-muted);
+  }
+
+  @media (min-width: 640px) {
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>hub</h1>
+  <ul class="cards">
+    <li>
+      <a class="card" href="/stock-paper-bot/">
+        <h2>stock-paper-bot</h2>
+        <p>Sanal portföy botu ve canlı panosu</p>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="/stock-analysis/">
+        <h2>stock-analysis</h2>
+        <p>Tek hisse için temel ve bilanço analizi</p>
+      </a>
+    </li>
+  </ul>
+</main>
+</body>
+</html>
